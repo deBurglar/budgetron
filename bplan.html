@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Budget Planner</title>
+    <link rel="stylesheet" href="bplan.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>SpendoCalypse</h1>
+            <button id="theme-toggle">🌓</button>
+        </header>
+        <main>
+            <section class="dashboard">
+                <div class="balance-card">
+                    <h2>Total Balance</h2>
+                    <p id="total-balance">$0.00</p>
+                </div>
+                <div class="summary-cards">
+                    <div class="card income">
+                        <h3>Income</h3>
+                        <p id="total-income">$0.00</p>
+                    </div>
+                    <div class="card expenses">
+                        <h3>Expenses</h3>
+                        <p id="total-expenses">$0.00</p>
+                    </div>
+                </div>
+            </section>
+            <section class="transaction-input">
+                <h2>Add Transaction</h2>
+                <form id="transaction-form">
+                    <input type="text" id="description" placeholder="Description" required>
+                    <input type="number" id="amount" placeholder="Amount" required>
+                    <select id="type">
+                        <option value="income">Income</option>
+                        <option value="expense">Expense</option>
+                    </select>
+                    <button type="submit">Add</button>
+                </form>
+            </section>
+            <section class="transaction-list">
+                <h2>Recent Transactions</h2>
+                <ul id="transactions"></ul>
+            </section>
+        </main>
+    </div>
+    <script src="bplan.js"></script>
+</body>
+</html>
